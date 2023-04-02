@@ -28,7 +28,7 @@ def signin():
         print("Cant add you")
     finally:
         root.destroy()
-        import trending
+        import homepage
 
 
 
