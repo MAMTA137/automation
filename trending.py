@@ -21,7 +21,7 @@ browser.find_element(By.NAME, 'username').send_keys('artistic_space8')
 
 
 time.sleep(1)
-browser.find_element(By.NAME, 'password').send_keys('tina19803', Keys.ENTER)
+browser.find_element(By.NAME, 'password').send_keys('tinaa@19', Keys.ENTER)
 time.sleep(2)
 
 
