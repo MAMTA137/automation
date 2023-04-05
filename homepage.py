@@ -1,3 +1,48 @@
+# import tkinter as tk
+# from InstagramAPI import InstagramAPI
+# from tkinter import filedialog
+# from tkinter import messagebox
+# from instagrapi import Client
+
+
+# root = tk.Tk()
+# root.geometry("1200x650")
+
+
+ 
+# ###MENU FRAME
+# left_frame = tk.Frame(root, borderwidth=2, bg="white", relief="solid", highlightthickness=2)
+# left_frame.pack(side="top", expand=False, fill="y")
+    
+# container = tk.Frame(left_frame, borderwidth=1, bg="white", relief="solid")
+# container.pack(expand=True, fill="both", padx=5, pady=5)
+    
+
+
+# def post():
+#        root.destroy()
+#        import schedulepost
+    
+# btn_2 = tk.Button(container, text="        Schedule Post", command=post)
+# btn_2.pack(padx=20, pady=20, side="right")
+
+# def voice():
+#        root.destroy()
+#        import voice
+# btn_3 = tk.Button(container, text="       speech      ",command=voice)
+# btn_3.pack(padx=20, pady=20, side="right")
+
+# def trend():
+#        root.destroy()
+#        import trending
+
+# btn_4 = tk.Button(container, text="     Trending post     ",command=trend)
+# btn_4.pack(padx=20, pady=20, side="right")
+
+# btn_5 = tk.Button(container, text="      chat bot    ")
+# btn_5.pack(padx=20, pady=20, side="right")
+    
+# root.mainloop()
 from tkinter import *
 import tkinter as tk
 import tkinter.ttk as ttk
@@ -34,6 +79,10 @@ container1.config(width=800)
 
 
 #8FBC8F
+btn_frame4 = tk.Frame(container)
+canvas4 = tk.Canvas(btn_frame4, height=100,bg='white', width=100)
+canvas4.pack()
+btn_frame4.pack(side=tk.TOP, padx=20)
 btn_frame = tk.Frame(container)
 canvas = tk.Canvas(btn_frame, height=100,bg='white', width=100)
 canvas.pack()
@@ -50,6 +99,7 @@ btn_frame3 = tk.Frame(container)
 canvas3 = tk.Canvas(btn_frame3, height=100,bg='white', width=100)
 canvas3.pack()
 btn_frame3.pack(side=tk.TOP, padx=20)
+
 def round_rectangle(obj, x1, y1, x2, y2, r=25, **kwargs):    
     points = (x1+r, y1, x1+r, y1, x2-r, y1, x2-r, y1, x2, y1, x2, y1+r, x2, y1+r, x2, y2-r, x2, y2-r, x2, y2, x2-r, y2, x2-r, y2, x1+r, y2, x1+r, y2, x1, y2, x1, y2-r, x1, y2-r, x1, y1+r, x1, y1+r, x1, y1)
     return obj.create_polygon(points, **kwargs, smooth=True)
@@ -61,6 +111,14 @@ round_rectangle(canvas1, 5, 50, 100, 100, 25, fill="#E1306C")
 round_rectangle(canvas2, 5, 50, 100, 100, 25, fill="#E1306C")
 
 round_rectangle(canvas3, 5, 50, 100, 100, 25, fill="#E1306C")
+round_rectangle(canvas4, 5, 50, 100, 100, 25, fill="#E1306C")
+
+def profile():
+  root.destroy()
+  import prof
+btn_5 = tk.Button(btn_frame4, text="Profile", font=("Bold", 13),bg="#E1306C", command=profile,fg="white", bd=0)
+ 
+btn_5.place(x=10, y=57, width=80)
 def voice():
   root.destroy()
   import voice
@@ -89,6 +147,23 @@ btn_4 = tk.Button(btn_frame3, text="Post", font=("Bold", 13),bg="#E1306C", comma
  
 btn_4.place(x=10, y=57, width=80)
 
+
+# btn_3 = tk.Button(container, text="Speak", command=voice,width=13, bg='#E1306C', fg='white', font=('Arial', 14))
+# btn_3.pack(padx=20, pady=20, side="top")
+
+
+
+# btn_4 = tk.Button(btn_frame , text="Trending post",width=13, bg='#E1306C', fg='white', font=('Arial', 14))
+# btn_4.pack(padx=20, pady=20)
+
+# btn_5 = tk.Button(container, text="Chat bot",width=13, bg='#C13584', fg='white', font=('Arial', 14))
+# btn_5.pack(padx=20, pady=20 )
+# def post():
+#  root.destroy()
+#  import post
+
+# btn_2 = tk.Button(container, text="Post",width=13, command=post, bg='#C13584', fg='white', font=('Arial', 14))
+# btn_2.pack(padx=20, pady=20, )
 
 my_pic = Image.open("static\\WhatsApp Image 2023-04-04 at 9.20.58 PM.jpeg")
 
